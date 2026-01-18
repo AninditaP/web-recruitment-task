@@ -1,2 +1,1 @@
-Work in progress
-TEST 2 
+This contains a web app which can generate a colour palette based on a hex code that the user has entered. A colour pallete containing the given hex code is retrived from the public external API. A secondary internal REST backend is added, which displays a set of premade colour palettes, saved in server.js. (HTTP method: GET) (route path: /api/palettes) (purpose: Displays a list of premade comprehensive color palettes with their names ) The UI contains: Dark/light mode toggle; Search option. The Techstack includes: frontend: expo; backend: node.js
