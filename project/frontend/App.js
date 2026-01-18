@@ -28,13 +28,13 @@ export default function App() {
   useEffect(() => { fetchExt(); }, []);
 
 
-  const bg = dark ? "#222" : "#fff";
-  const txt = dark ? "#fff" : "#000";
+  const bg = dark ? "#30323D" : "#F5F7DC";
+  const txt = dark ? "#F5F7DC" : "#30323D";
 
   return (
     <View style={{ padding: 40, flex: 1, backgroundColor: bg }}>
       <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 20, justifyContent: "space-between" }}>
-        <Text style={{ fontSize: 20, fontWeight: "bold", color: txt }}>🎨 Chroma</Text>
+        <Text style={{ fontSize: 20, fontWeight: "bold", color: txt }}>Palette Generator</Text>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Text style={{ color: txt, marginRight: 10 }}>Dark Mode</Text>
           <Switch value={dark} onValueChange={setDark} />
@@ -47,9 +47,9 @@ export default function App() {
         style={{ borderWidth: 1, borderColor: "#888", color: txt, padding: 10, marginBottom: 10, borderRadius: 5 }} 
       />
       
-      <Button title="Generate a New Palette" onPress={fetchExt} />
+      <Button title="Generate a New Palette" color="#E65F5C"onPress={fetchExt} />
       <View style={{ height: 10 }} />
-      <Button title="View Existing Palettes" color="#ff0055" onPress={fetchBack} />
+      <Button title="View Existing Palettes" color="#6C9A8B" onPress={fetchBack} />
       
       <ScrollView style={{ marginTop: 20 }}>
         {data.map(item => (
